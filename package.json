@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/nimbolus/nimbolus.de#readme",
   "devDependencies": {
-    "autoprefixer": "^10.2.5",
-    "postcss-cli": ">=8.2.10"
+    "autoprefixer": "^9.8.6",
+    "postcss-cli": "^7.1.2"
   }
 }
