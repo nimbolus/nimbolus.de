@@ -4,7 +4,7 @@ title = "Nimbolus"
 description = "Nimbolus Documentation"
 theme = ["docsy"]
 
-enableGitInfo = false
+enableGitInfo = true
 
 contentDir = "content/en"
 defaultContentLanguageInSubdir = true
