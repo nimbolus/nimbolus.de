@@ -1,0 +1,22 @@
+{
+  "name": "nimolus.de",
+  "version": "0.0.1",
+  "description": "nimbolus documentation.",
+  "main": "none.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nimbolus/nimbolus.de.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/nimbolus/nimbolus.de/issues"
+  },
+  "homepage": "https://github.com/nimbolus/nimbolus.de#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "postcss-cli": "^7.1.2"
+  }
+}
