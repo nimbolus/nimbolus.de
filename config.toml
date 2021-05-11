@@ -1,0 +1,54 @@
+baseURL = "https://nimbolus.de/"
+languageCode = "en-us"
+title = "Nimbolus"
+description = "Nimbolus Documentation"
+theme = ["docsy"]
+
+enableGitInfo = false
+
+contentDir = "content/en"
+defaultContentLanguageInSubdir = true
+
+[languages]
+[languages.en]
+title = "Nimbolus"
+description = "Nimbolus Documentation"
+languageName ="English"
+weight = 1
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+      style = "monokai"
+
+[outputs]
+section = ["HTML", "print"]
+
+[params]
+copyright = "Nimbolus"
+images = ["logo/nimbolus_red_512.png"]
+
+github_repo = "https://github.com/nimbolus/nimbolus.de"
+github_branch= "main"
+
+[params.ui.readingtime]
+enable = true
+
+[params.ui]
+sidebar_menu_compact = false
+breadcrumb_disable = false
+sidebar_search_disable = false
+navbar_logo = true
+footer_about_disable = true
+
+[params.mermaid]
+enable = true
+theme = "neutral"
+
+[[menu.main]]
+    name = "GitHub"
+    weight = 50
+    url = "https://github.com/nimbolus/"
+    pre = "<i class='fab fa-github'></i>"
