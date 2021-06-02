@@ -2,7 +2,8 @@
 title: "Terraform K3s"
 linkTitle: "Terraform K3s"
 date: "2021-05-11T01:41:54+02:00"
-weight: 2
+weight: 1
+description: "Provision a HA K3s cluster on OpenStack, Hetzner or anything else."
 
 github_project_repo: https://github.com/nimbolus/tf-k3s
 ---
@@ -18,7 +19,7 @@ Modules for [OpenStack](https://github.com/nimbolus/tf-k3s/tree/master/k3s-opens
 Note that network, subnet and key pair needs to be created beforehand.
 
 ### Simple Module for templating cloudinit user_data
-[View on GitHub](https://github.com/nimbolus/tf-k3s/tree/master/example-simple.tf)
+[View on GitHub](https://github.com/nimbolus/tf-k3s/tree/master/examples/basic/main.tf)
 
 ```terraform
 resource "random_password" "cluster_token" {
@@ -46,7 +47,7 @@ module "k3s_worker" {
 ```
 
 ### HA-Master and bootstrap token with OpenStack
-[View on GitHub](https://github.com/nimbolus/tf-k3s/tree/master/example-ha-openstack.tf)
+[View on GitHub](https://github.com/nimbolus/tf-k3s/tree/master/examples/ha-openstack/main.tf)
 
 ```terraform
 resource "random_password" "ha_cluster_token" {
@@ -152,7 +153,7 @@ provider "kubernetes" {
 ```
 
 ### Single Master and Worker with hcloud
-[View on GitHub](https://github.com/nimbolus/tf-k3s/tree/master/example-simple-hcloud.tf)
+[View on GitHub](https://github.com/nimbolus/tf-k3s/tree/master/examples/basic-hcloud/main.tf)
 
 ```terraform
 resource "random_password" "hcloud_cluster_token" {
