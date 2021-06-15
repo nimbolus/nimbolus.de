@@ -1,158 +1,69 @@
 <!doctype html><html lang=en class=no-js><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=generator content="Hugo 0.83.1"><link rel=canonical type=text/html href=https://nimbolus.de/terraform-modules/tf-k3s/><meta name=ROBOTS content="NOINDEX, NOFOLLOW"><link rel="shortcut icon" href=/favicons/favicon.ico><link rel=apple-touch-icon href=/favicons/apple-touch-icon-180x180.png sizes=180x180><link rel=icon type=image/png href=/favicons/favicon-16x16.png sizes=16x16><link rel=icon type=image/png href=/favicons/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/favicons/android-36x36.png sizes=36x36><link rel=icon type=image/png href=/favicons/android-48x48.png sizes=48x48><link rel=icon type=image/png href=/favicons/android-72x72.png sizes=72x72><link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96><link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144><link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192><title>Terraform K3s | Nimbolus</title><meta name=description content="Nimbolus Documentation"><meta property="og:title" content="Terraform K3s"><meta property="og:description" content="Provision a HA K3s cluster on OpenStack, Hetzner or anything else."><meta property="og:type" content="website"><meta property="og:url" content="https://nimbolus.de/terraform-modules/tf-k3s/"><meta property="og:image" content="https://nimbolus.de/logo/nimbolus_red_512.png"><meta property="og:site_name" content="Nimbolus"><meta itemprop=name content="Terraform K3s"><meta itemprop=description content="Provision a HA K3s cluster on OpenStack, Hetzner or anything else."><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://nimbolus.de/logo/nimbolus_red_512.png"><meta name=twitter:title content="Terraform K3s"><meta name=twitter:description content="Provision a HA K3s cluster on OpenStack, Hetzner or anything else."><link rel=preload href=/scss/main.min.9881c347edd02eef69f1f1dcf28e8a33a745e87aed8b32cba83d5aecbac6dda1.css as=style><link href=/scss/main.min.9881c347edd02eef69f1f1dcf28e8a33a745e87aed8b32cba83d5aecbac6dda1.css rel=stylesheet integrity><script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script></head><body class=td-section><header><nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar"><a class=navbar-brand href=/><span class=navbar-logo><svg width="64mm" height="64mm" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><defs><marker id="marker1954-3-3-8-0" overflow="visible" orient="auto"><path transform="matrix(.3 0 0 .3 -.69 0)" d="m8.7186 4.0337L-2.2074.016l10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill="#fff" fill-rule="evenodd" stroke="#fff" stroke-linejoin="round" stroke-width=".625"/></marker><marker id="marker1964-0-7-2-9" overflow="visible" orient="auto"><path transform="matrix(.3 0 0 .3 -.69 0)" d="m8.7186 4.0337L-2.2074.016l10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" fill="#fff" fill-rule="evenodd" stroke="#fff" stroke-linejoin="round" stroke-width=".625"/></marker></defs><g transform="translate(4.7684e-7 -96)"><rect x="1.0554" y="97.055" width="61.889" height="61.889" ry="3.9567" fill="#af0000" stroke="#af0000" stroke-width="2.1109"/><text x="12.197939" y="136.81088" fill="#fff" font-family="sans-serif" font-size="9.521" letter-spacing="0" stroke-width=".48973" word-spacing="0" style="line-height:1.25"><tspan x="12.197939" y="136.81088" fill="#fff" font-family="Roboto" font-size="9.521" font-weight="500" stroke-width=".48973">nimbolus</tspan></text><switch transform="matrix(.59037 0 0 .59037 -.22693 98.706)" stroke="#fff" stroke-width="3.8572"><g transform="translate(4.5878 -1.5774)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><g stroke-width="3.8572"><path d="m52.923 75H17.6c-7.2.0-13-6.4-13-13.5.0-7.2 5.8-13.2 13-13.2.8.0 1.5-.1 2.3.1.4-8.8 7.1-15.8 15.2-15.8 2.35.0 4.55.55 6.5125 1.55S45.3 36.6 46.7 38.4" marker-start="url(#marker1954-3-3-8-0)" style="mix-blend-mode:normal"/><path d="m51.313 31.149c4.264-3.7548.46823-1.0679 1.9745-2.2366C56.3 26.5749 60 25.1999 63.9995 25.1999c10.1.0 18.3 8.9 18.3 19.9.0 1-.1 2.1-.2 3 .1.0.1.3.2.3 7.2-.2 13.1 5.9 13.1 13.1s-5.8 13.5-13 13.5h-21.386" marker-start="url(#marker1964-0-7-2-9)" style="mix-blend-mode:normal"/></g><path d="m66.336 30.269c3.5471 1.4524 10.678 4.5894 10.814 15.159" stroke-width="2.4286" style="mix-blend-mode:normal"/><path d="m8.8618 61.644c.71672-3.8601 2.7685-6.66 5.334-7.6148" stroke-width="2.4286" style="mix-blend-mode:normal"/></g><foreignObject width="1" height="1" requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/"/><text x="18.69075" y="66.653198" fill="#000" font-family="sans-serif" font-size="22.175" letter-spacing="0" stroke="#fff" stroke-width="2.9159" word-spacing="0" style="line-height:1.25"><tspan x="18.69075" y="66.653198" font-size="14.111" stroke="#fff" stroke-width="2.9159">nimbolus</tspan></text></switch></g></svg></span><span class="text-uppercase font-weight-bold">Nimbolus</span></a><div class="td-navbar-nav-scroll ml-md-auto" id=main_navbar><ul class="navbar-nav mt-2 mt-lg-0"><li class="nav-item mr-4 mb-2 mb-lg-0"><a class="nav-link active" href=/><span class=active>Documentation</span></a></li><li class="nav-item mr-4 mb-2 mb-lg-0"><a class=nav-link href=https://github.com/nimbolus/ target=_blank><i class="fab fa-github"></i><span>GitHub</span></a></li></ul></div><div class="navbar-nav d-none d-lg-block"></div></nav></header><div class="container-fluid td-outer"><div class=td-main><div class="row flex-xl-nowrap"><div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none"></div><div class="d-none d-xl-block col-xl-2 td-toc d-print-none"></div><main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main><div class=td-content><div class="pageinfo pageinfo-primary d-print-none"><p>This the multi-page printable view of this section.
-<a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=/terraform-modules/tf-k3s/>Return to the regular view of this page</a>.</p></div><h1 class=title>Terraform K3s</h1><div class=lead>Provision a HA K3s cluster on OpenStack, Hetzner or anything else.</div><ul></ul><div class=content><p><a href=https://github.com/nimbolus/tf-k3s.git>View on GitHub</a></p><p>These Terraform modules can provision k3s nodes and are able to build a cluster from multiple nodes.</p><p>You can use the <a href=https://github.com/nimbolus/tf-k3s/tree/master/k3s>k3s</a> module to template the necessary cloudinit files for creating a k3s cluster node.
-Modules for <a href=https://github.com/nimbolus/tf-k3s/tree/master/k3s-openstack>OpenStack</a> and <a href=https://github.com/nimbolus/tf-k3s/tree/master/k3s-hcloud>Hetzner hcloud</a> that bundle all necessary resources are available.</p><h2 id=examples>Examples</h2><p>Note that network, subnet and key pair needs to be created beforehand.</p><h3 id=simple-module-for-templating-cloudinit-user_data>Simple Module for templating cloudinit user_data</h3><p><a href=https://github.com/nimbolus/tf-k3s/tree/master/examples/basic/main.tf>View on GitHub</a></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-terraform data-lang=terraform><span style=color:#66d9ef>resource</span> <span style=color:#e6db74>&#34;random_password&#34;</span> <span style=color:#e6db74>&#34;cluster_token&#34;</span> {
-  <span style=color:#a6e22e>length</span>  = <span style=color:#ae81ff>64</span>
-  <span style=color:#a6e22e>special</span> = <span style=color:#66d9ef>false</span>
-}
-<span style=color:#66d9ef>
-</span><span style=color:#66d9ef>module</span> <span style=color:#e6db74>&#34;k3s_master&#34;</span> {
-  <span style=color:#a6e22e>source</span> = <span style=color:#e6db74>&#34;github.com/nimbolus/tf-k3s/k3s&#34;</span>
+<a href=# onclick="return print(),!1">Click here to print</a>.</p><p><a href=/terraform-modules/tf-k3s/>Return to the regular view of this page</a>.</p></div><h1 class=title>Terraform K3s</h1><div class=lead>Provision a HA K3s cluster on OpenStack, Hetzner or anything else.</div><ul></ul><div class=content><p><a href=https://github.com/nimbolus/tf-k3s.git>View on GitHub</a></p><p>Provisions K3s nodes and is able to build a cluster from multiple nodes.</p><p>You can use the <a href=./k3s>k3s</a> module to template the necessary cloudinit files for creating a K3s cluster node.
+Modules for <a href=./k3s-openstack>OpenStack</a> and <a href=./k3s-hcloud>Hetzner hcloud</a> that bundle all necessary resources are available.</p><h2 id=supported-cloud-providers>Supported Cloud Providers</h2><ul><li>OpenStack</li><li>Hetzner Cloud (hcloud)</li></ul><h2 id=modules>Modules</h2><h3 id=k3s>k3s</h3><p>This module provides the templating of the user_data for use with cloud-init.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-terraform data-lang=terraform><span style=color:#66d9ef>module</span> <span style=color:#e6db74>&#34;k3s_server&#34;</span> {
+  <span style=color:#a6e22e>source</span> = <span style=color:#e6db74>&#34;git::https://github.com/nimbolus/tf-k3s.git//k3s&#34;</span>
 
-  <span style=color:#a6e22e>name</span>             = <span style=color:#e6db74>&#34;k3s-master&#34;</span>
-  <span style=color:#a6e22e>k3s_token</span>        = <span style=color:#a6e22e>random_password</span>.<span style=color:#a6e22e>cluster_token</span>.<span style=color:#a6e22e>result</span>
+  <span style=color:#a6e22e>name</span>             = <span style=color:#e6db74>&#34;k3s-server&#34;</span>
+  <span style=color:#a6e22e>cluster_token</span>    = <span style=color:#e6db74>&#34;abcdef&#34;</span>
+  <span style=color:#a6e22e>k3s_ip</span>           = <span style=color:#e6db74>&#34;10.11.12.13&#34;</span>
   <span style=color:#a6e22e>install_k3s_exec</span> = <span style=color:#e6db74>&#34;server --disable traefik --node-label az=ex1&#34;</span>
 }
 <span style=color:#66d9ef>
-</span><span style=color:#66d9ef>module</span> <span style=color:#e6db74>&#34;k3s_worker&#34;</span> {
-  <span style=color:#a6e22e>source</span> = <span style=color:#e6db74>&#34;github.com/nimbolus/tf-k3s/k3s&#34;</span>
+</span><span style=color:#66d9ef>output</span> <span style=color:#e6db74>&#34;server_user_data&#34;</span> {
+  <span style=color:#a6e22e>value</span>     = module.<span style=color:#a6e22e>k3s_server</span>.<span style=color:#a6e22e>user_data</span>
+  <span style=color:#a6e22e>sensitive</span> = <span style=color:#66d9ef>true</span>
+}
+</code></pre></div><h3 id=k3s-openstack>k3s-openstack</h3><p>With this module a single K3s node can be deployed with OpenStack. It internally uses the k3s module. Depending on the supplied parameters the node will initialize a new cluster or join an existing cluster as a server or agent.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-terraform data-lang=terraform><span style=color:#66d9ef>module</span> <span style=color:#e6db74>&#34;server&#34;</span> {
+  <span style=color:#a6e22e>source</span> = <span style=color:#e6db74>&#34;git::https://github.com/nimbolus/tf-k3s.git//k3s-openstack&#34;</span>
 
-  <span style=color:#a6e22e>name</span>              = <span style=color:#e6db74>&#34;k3s-worker&#34;</span>
-  <span style=color:#a6e22e>k3s_join_existing</span> = <span style=color:#66d9ef>true</span>
-  <span style=color:#a6e22e>k3s_url</span>           = module.<span style=color:#a6e22e>k3s_master</span>.<span style=color:#a6e22e>k3s_url</span>
-  <span style=color:#a6e22e>k3s_token</span>         = <span style=color:#a6e22e>random_password</span>.<span style=color:#a6e22e>cluster_token</span>.<span style=color:#a6e22e>result</span>
-  <span style=color:#a6e22e>install_k3s_exec</span>  = <span style=color:#e6db74>&#34;agent --node-label az=ex1&#34;</span>
-}
-</code></pre></div><h3 id=ha-master-and-bootstrap-token-with-openstack>HA-Master and bootstrap token with OpenStack</h3><p><a href=https://github.com/nimbolus/tf-k3s/tree/master/examples/ha-openstack/main.tf>View on GitHub</a></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-terraform data-lang=terraform><span style=color:#66d9ef>resource</span> <span style=color:#e6db74>&#34;random_password&#34;</span> <span style=color:#e6db74>&#34;ha_cluster_token&#34;</span> {
-  <span style=color:#a6e22e>length</span>  = <span style=color:#ae81ff>64</span>
-  <span style=color:#a6e22e>special</span> = <span style=color:#66d9ef>false</span>
-}
-<span style=color:#66d9ef>
-</span><span style=color:#66d9ef>resource</span> <span style=color:#e6db74>&#34;random_password&#34;</span> <span style=color:#e6db74>&#34;ha_bootstrap_token_id&#34;</span> {
-  <span style=color:#a6e22e>length</span>  = <span style=color:#ae81ff>6</span>
-  <span style=color:#a6e22e>special</span> = <span style=color:#66d9ef>false</span>
-}
-<span style=color:#66d9ef>
-</span><span style=color:#66d9ef>resource</span> <span style=color:#e6db74>&#34;random_password&#34;</span> <span style=color:#e6db74>&#34;ha_bootstrap_token_secret&#34;</span> {
-  <span style=color:#a6e22e>length</span>  = <span style=color:#ae81ff>16</span>
-  <span style=color:#a6e22e>special</span> = <span style=color:#66d9ef>false</span>
-}
-<span style=color:#66d9ef>
-</span><span style=color:#66d9ef>module</span> <span style=color:#e6db74>&#34;master1&#34;</span> {
-  <span style=color:#a6e22e>source</span> = <span style=color:#e6db74>&#34;github.com/nimbolus/tf-k3s/k3s-openstack&#34;</span>
+  <span style=color:#a6e22e>name</span>               = <span style=color:#e6db74>&#34;k3s-server&#34;</span>
+  <span style=color:#a6e22e>image_name</span>         = <span style=color:#e6db74>&#34;ubuntu-20.04&#34;</span>
+  <span style=color:#a6e22e>flavor_name</span>        = <span style=color:#e6db74>&#34;m1.small&#34;</span>
+  <span style=color:#a6e22e>availability_zone</span>  = <span style=color:#e6db74>&#34;ex&#34;</span>
+  <span style=color:#a6e22e>keypair_name</span>       = <span style=color:#e6db74>&#34;keypair&#34;</span>
+  <span style=color:#a6e22e>network_id</span>         = var.<span style=color:#a6e22e>network_id</span>
+  <span style=color:#a6e22e>subnet_id</span>          = var.<span style=color:#a6e22e>subnet_id</span>
+  <span style=color:#a6e22e>security_group_ids</span> = [module.<span style=color:#a6e22e>secgroup</span>.<span style=color:#a6e22e>id</span>]
 
-  <span style=color:#a6e22e>name</span>              = <span style=color:#e6db74>&#34;k3s-master1&#34;</span>
-  <span style=color:#a6e22e>image_name</span>        = <span style=color:#e6db74>&#34;ubuntu-20.04&#34;</span>
-  <span style=color:#a6e22e>flavor_name</span>       = <span style=color:#e6db74>&#34;m1.small&#34;</span>
-  <span style=color:#a6e22e>availability_zone</span> = <span style=color:#e6db74>&#34;ex1&#34;</span>
-  <span style=color:#a6e22e>keypair_name</span>      = <span style=color:#e6db74>&#34;example-keypair&#34;</span>
-  <span style=color:#a6e22e>network_id</span>        = <span style=color:#e6db74>&#34;example-id&#34;</span>
-  <span style=color:#a6e22e>subnet_id</span>         = <span style=color:#e6db74>&#34;example-id&#34;</span>
-
-  <span style=color:#a6e22e>k3s_token</span>              = <span style=color:#a6e22e>random_password</span>.<span style=color:#a6e22e>ha_cluster_token</span>.<span style=color:#a6e22e>result</span>
-  <span style=color:#a6e22e>install_k3s_exec</span>       = <span style=color:#e6db74>&#34;server --cluster-init --kube-apiserver-arg=</span><span style=color:#960050;background-color:#1e0010>\</span><span style=color:#e6db74>&#34;</span><span style=color:#a6e22e>enable</span><span style=color:#f92672>-</span><span style=color:#a6e22e>bootstrap</span><span style=color:#f92672>-</span><span style=color:#a6e22e>token</span><span style=color:#f92672>-</span><span style=color:#a6e22e>auth</span><span style=color:#960050;background-color:#1e0010>\</span><span style=color:#e6db74>&#34; --node-label az=ex1&#34;</span>
-  <span style=color:#a6e22e>bootstrap_token_id</span>     = <span style=color:#a6e22e>nonsensitive</span>(<span style=color:#a6e22e>random_password</span>.<span style=color:#a6e22e>ha_bootstrap_token_id</span>.<span style=color:#a6e22e>result</span>)
-  <span style=color:#a6e22e>bootstrap_token_secret</span> = <span style=color:#a6e22e>random_password</span>.<span style=color:#a6e22e>ha_bootstrap_token_secret</span>.<span style=color:#a6e22e>result</span>
+  <span style=color:#a6e22e>cluster_token</span>          = <span style=color:#e6db74>&#34;abcdef&#34;</span>
+  <span style=color:#a6e22e>install_k3s_exec</span>       = <span style=color:#e6db74>&#34;server --disable traefik --node-label az=ex&#34;</span><span style=color:#75715e> // if using bootstrap-auth include &#34;--kube-apiserver-arg=\&#34;enable-bootstrap-token-auth\&#34;&#34;
+</span><span style=color:#75715e></span>  <span style=color:#a6e22e>bootstrap_token_id</span>     = <span style=color:#e6db74>&#34;012345&#34;</span>
+  <span style=color:#a6e22e>bootstrap_token_secret</span> = <span style=color:#e6db74>&#34;0123456789abcdef&#34;</span>
 }
-<span style=color:#66d9ef>
-</span><span style=color:#66d9ef>output</span> <span style=color:#e6db74>&#34;k3s_url&#34;</span> {
-  <span style=color:#a6e22e>value</span> = module.<span style=color:#a6e22e>master1</span>.<span style=color:#a6e22e>k3s_url</span>
+</code></pre></div><h3 id=k3s-openstacksecurity-group>k3s-openstack/security-group</h3><p>The necessary security-group for the K3s cluster can be deployed with this module.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-terraform data-lang=terraform><span style=color:#66d9ef>module</span> <span style=color:#e6db74>&#34;secgroup&#34;</span> {
+  <span style=color:#a6e22e>source</span> = <span style=color:#e6db74>&#34;git::https://github.com/nimbolus/tf-k3s.git//k3s-openstack/security-group&#34;</span>
 }
-<span style=color:#66d9ef>
-</span><span style=color:#66d9ef>resource</span> <span style=color:#e6db74>&#34;local_file&#34;</span> <span style=color:#e6db74>&#34;kubeconfig&#34;</span> {
-  <span style=color:#a6e22e>filename</span> = <span style=color:#e6db74>&#34;kubeconfig.yaml&#34;</span>
-  <span style=color:#a6e22e>content</span>  = module.<span style=color:#a6e22e>master1</span>.<span style=color:#a6e22e>kubeconfig</span>
+</code></pre></div><h3 id=k3s-hcloud>k3s-hcloud</h3><p>With this module a single K3s node can be deployed with hcloud. It internally uses the k3s module. Depending on the supplied parameters the node will initialize a new cluster or join an existing cluster as a server or agent.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-terraform data-lang=terraform><span style=color:#66d9ef>module</span> <span style=color:#e6db74>&#34;server&#34;</span> {
+  <span style=color:#a6e22e>source</span> = <span style=color:#e6db74>&#34;git::https://github.com/nimbolus/tf-k3s.git//k3s-hcloud&#34;</span>
+
+  <span style=color:#a6e22e>name</span>          = <span style=color:#e6db74>&#34;k3s-server&#34;</span>
+  <span style=color:#a6e22e>keypair_name</span>  = <span style=color:#e6db74>&#34;keypair&#34;</span>
+  <span style=color:#a6e22e>network_id</span>    = var.<span style=color:#a6e22e>network_id</span>
+  <span style=color:#a6e22e>network_range</span> = var.<span style=color:#a6e22e>ip_range</span>
+
+  <span style=color:#a6e22e>cluster_token</span>          = <span style=color:#e6db74>&#34;abcdef&#34;</span>
+  <span style=color:#a6e22e>install_k3s_exec</span>       = <span style=color:#e6db74>&#34;server --disable traefik --node-label az=ex&#34;</span><span style=color:#75715e> // if using bootstrap-auth include &#34;--kube-apiserver-arg=\&#34;enable-bootstrap-token-auth\&#34;&#34;&#34;
+</span><span style=color:#75715e></span>  <span style=color:#a6e22e>bootstrap_token_id</span>     = <span style=color:#e6db74>&#34;012345&#34;</span>
+  <span style=color:#a6e22e>bootstrap_token_secret</span> = <span style=color:#e6db74>&#34;0123456789abcdef&#34;</span>
 }
-<span style=color:#66d9ef>
-</span><span style=color:#66d9ef>module</span> <span style=color:#e6db74>&#34;master2&#34;</span> {
-  <span style=color:#a6e22e>source</span> = <span style=color:#e6db74>&#34;github.com/nimbolus/tf-k3s/k3s-openstack&#34;</span>
-
-  <span style=color:#a6e22e>name</span>              = <span style=color:#e6db74>&#34;k3s-master2&#34;</span>
-  <span style=color:#a6e22e>image_name</span>        = <span style=color:#e6db74>&#34;ubuntu-20.04&#34;</span>
-  <span style=color:#a6e22e>flavor_name</span>       = <span style=color:#e6db74>&#34;m1.small&#34;</span>
-  <span style=color:#a6e22e>availability_zone</span> = <span style=color:#e6db74>&#34;ex1&#34;</span>
-  <span style=color:#a6e22e>keypair_name</span>      = <span style=color:#e6db74>&#34;example-keypair&#34;</span>
-  <span style=color:#a6e22e>network_id</span>        = <span style=color:#e6db74>&#34;example-id&#34;</span>
-  <span style=color:#a6e22e>subnet_id</span>         = <span style=color:#e6db74>&#34;example-id&#34;</span>
-  <span style=color:#a6e22e>security_group_id</span> = module.<span style=color:#a6e22e>master1</span>.<span style=color:#a6e22e>security_group_id</span>
-
-  <span style=color:#a6e22e>k3s_join_existing</span> = <span style=color:#66d9ef>true</span>
-  <span style=color:#a6e22e>k3s_url</span>           = module.<span style=color:#a6e22e>master1</span>.<span style=color:#a6e22e>k3s_url</span>
-  <span style=color:#a6e22e>k3s_token</span>         = <span style=color:#a6e22e>random_password</span>.<span style=color:#a6e22e>ha_cluster_token</span>.<span style=color:#a6e22e>result</span>
-  <span style=color:#a6e22e>install_k3s_exec</span>  = <span style=color:#e6db74>&#34;server --kube-apiserver-arg=</span><span style=color:#960050;background-color:#1e0010>\</span><span style=color:#e6db74>&#34;</span><span style=color:#a6e22e>enable</span><span style=color:#f92672>-</span><span style=color:#a6e22e>bootstrap</span><span style=color:#f92672>-</span><span style=color:#a6e22e>token</span><span style=color:#f92672>-</span><span style=color:#a6e22e>auth</span><span style=color:#960050;background-color:#1e0010>\</span><span style=color:#e6db74>&#34; --node-label az=ex1&#34;</span>
+</code></pre></div><h3 id=bootstrap-auth>bootstrap-auth</h3><p>To access the cluster an optional bootstrap token can be installed on the cluster. To install the token specify the parameters <code>bootstrap_token_id</code> and <code>bootstrap_token_secret</code> on the server that initializes the cluster.
+For ease of use this module can be used to retrieve the CA certificate from the cluster. The module also outputs a kubeconfig with the bootstrap token.
+Please keep in mind that the connection to retrieve the CA certificate cannot be secure as the certificate cannot be verified. Additionally this module makes use of the <a href=https://github.com/scottwinkler/terraform-provider-shell>scottwinkler/shell</a> provider. Please make sure you only supply trusted values to the module.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-terraform data-lang=terraform><span style=color:#66d9ef>module</span> <span style=color:#e6db74>&#34;bootstrap_auth&#34;</span> {
+  <span style=color:#a6e22e>source</span>     = <span style=color:#e6db74>&#34;git::https://github.com/nimbolus/tf-k3s.git//bootstrap-auth&#34;</span><span style=color:#75715e>
+</span><span style=color:#75715e>  // depends_on = [module.secgroup] // if using OpenStack
+</span><span style=color:#75715e></span>
+  <span style=color:#a6e22e>k3s_url</span> = module.<span style=color:#a6e22e>server1</span>.<span style=color:#a6e22e>k3s_external_url</span>
+  <span style=color:#a6e22e>token</span>   = <span style=color:#a6e22e>local</span>.<span style=color:#a6e22e>token</span>
 }
-<span style=color:#66d9ef>
-</span><span style=color:#66d9ef>module</span> <span style=color:#e6db74>&#34;master3&#34;</span> {
-  <span style=color:#a6e22e>source</span> = <span style=color:#e6db74>&#34;github.com/nimbolus/tf-k3s/k3s-openstack&#34;</span>
-
-  <span style=color:#a6e22e>name</span>              = <span style=color:#e6db74>&#34;k3s-master3&#34;</span>
-  <span style=color:#a6e22e>image_name</span>        = <span style=color:#e6db74>&#34;ubuntu-20.04&#34;</span>
-  <span style=color:#a6e22e>flavor_name</span>       = <span style=color:#e6db74>&#34;m1.small&#34;</span>
-  <span style=color:#a6e22e>availability_zone</span> = <span style=color:#e6db74>&#34;ex1&#34;</span>
-  <span style=color:#a6e22e>keypair_name</span>      = <span style=color:#e6db74>&#34;example-keypair&#34;</span>
-  <span style=color:#a6e22e>network_id</span>        = <span style=color:#e6db74>&#34;example-id&#34;</span>
-  <span style=color:#a6e22e>subnet_id</span>         = <span style=color:#e6db74>&#34;example-id&#34;</span>
-  <span style=color:#a6e22e>security_group_id</span> = module.<span style=color:#a6e22e>master1</span>.<span style=color:#a6e22e>security_group_id</span>
-
-  <span style=color:#a6e22e>k3s_join_existing</span> = <span style=color:#66d9ef>true</span>
-  <span style=color:#a6e22e>k3s_url</span>           = module.<span style=color:#a6e22e>master1</span>.<span style=color:#a6e22e>k3s_url</span>
-  <span style=color:#a6e22e>k3s_token</span>         = <span style=color:#a6e22e>random_password</span>.<span style=color:#a6e22e>ha_cluster_token</span>.<span style=color:#a6e22e>result</span>
-  <span style=color:#a6e22e>install_k3s_exec</span>  = <span style=color:#e6db74>&#34;server --kube-apiserver-arg=</span><span style=color:#960050;background-color:#1e0010>\</span><span style=color:#e6db74>&#34;</span><span style=color:#a6e22e>enable</span><span style=color:#f92672>-</span><span style=color:#a6e22e>bootstrap</span><span style=color:#f92672>-</span><span style=color:#a6e22e>token</span><span style=color:#f92672>-</span><span style=color:#a6e22e>auth</span><span style=color:#960050;background-color:#1e0010>\</span><span style=color:#e6db74>&#34; --node-label az=ex1&#34;</span>
-}
-<span style=color:#66d9ef>
-</span><span style=color:#66d9ef>module</span> <span style=color:#e6db74>&#34;worker1&#34;</span> {
-  <span style=color:#a6e22e>source</span> = <span style=color:#e6db74>&#34;github.com/nimbolus/tf-k3s/k3s-openstack&#34;</span>
-
-  <span style=color:#a6e22e>name</span>              = <span style=color:#e6db74>&#34;k3s-worker1&#34;</span>
-  <span style=color:#a6e22e>image_name</span>        = <span style=color:#e6db74>&#34;ubuntu-20.04&#34;</span>
-  <span style=color:#a6e22e>flavor_name</span>       = <span style=color:#e6db74>&#34;m1.small&#34;</span>
-  <span style=color:#a6e22e>availability_zone</span> = <span style=color:#e6db74>&#34;ex1&#34;</span>
-  <span style=color:#a6e22e>keypair_name</span>      = <span style=color:#e6db74>&#34;example-keypair&#34;</span>
-  <span style=color:#a6e22e>network_id</span>        = <span style=color:#e6db74>&#34;example-id&#34;</span>
-  <span style=color:#a6e22e>subnet_id</span>         = <span style=color:#e6db74>&#34;example-id&#34;</span>
-  <span style=color:#a6e22e>security_group_id</span> = module.<span style=color:#a6e22e>master1</span>.<span style=color:#a6e22e>security_group_id</span>
-
-  <span style=color:#a6e22e>k3s_join_existing</span> = <span style=color:#66d9ef>true</span>
-  <span style=color:#a6e22e>k3s_url</span>           = module.<span style=color:#a6e22e>master1</span>.<span style=color:#a6e22e>k3s_url</span>
-  <span style=color:#a6e22e>k3s_token</span>         = <span style=color:#a6e22e>random_password</span>.<span style=color:#a6e22e>ha_cluster_token</span>.<span style=color:#a6e22e>result</span>
-  <span style=color:#a6e22e>install_k3s_exec</span>  = <span style=color:#e6db74>&#34;agent --node-label az=ex1&#34;</span>
-}
-<span style=color:#66d9ef>
-</span><span style=color:#66d9ef>provider</span> <span style=color:#e6db74>&#34;kubernetes&#34;</span> {
-  <span style=color:#a6e22e>host</span>                   = module.<span style=color:#a6e22e>master1</span>.<span style=color:#a6e22e>k3s_url</span>
-  <span style=color:#a6e22e>token</span>                  = <span style=color:#e6db74>&#34;</span><span style=color:#e6db74>${</span>module.<span style=color:#a6e22e>master1</span>.<span style=color:#a6e22e>bootstrap_token_id</span><span style=color:#e6db74>}</span><span style=color:#e6db74>.</span><span style=color:#e6db74>${</span>module.<span style=color:#a6e22e>master1</span>.<span style=color:#a6e22e>bootstrap_token_secret</span><span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>
-  <span style=color:#a6e22e>cluster_ca_certificate</span> = base64decode(module.<span style=color:#a6e22e>master1</span>.<span style=color:#a6e22e>ca_crt</span>)
-}
-</code></pre></div><h3 id=single-master-and-worker-with-hcloud>Single Master and Worker with hcloud</h3><p><a href=https://github.com/nimbolus/tf-k3s/tree/master/examples/basic-hcloud/main.tf>View on GitHub</a></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-terraform data-lang=terraform><span style=color:#66d9ef>resource</span> <span style=color:#e6db74>&#34;random_password&#34;</span> <span style=color:#e6db74>&#34;hcloud_cluster_token&#34;</span> {
-  <span style=color:#a6e22e>length</span>  = <span style=color:#ae81ff>64</span>
-  <span style=color:#a6e22e>special</span> = <span style=color:#66d9ef>false</span>
-}
-<span style=color:#66d9ef>
-</span><span style=color:#66d9ef>module</span> <span style=color:#e6db74>&#34;hcloud_master&#34;</span> {
-  <span style=color:#a6e22e>source</span> = <span style=color:#e6db74>&#34;github.com/nimbolus/tf-k3s/k3s-hcloud&#34;</span>
-
-  <span style=color:#a6e22e>name</span>         = <span style=color:#e6db74>&#34;k3s-master&#34;</span>
-  <span style=color:#a6e22e>keypair_name</span> = <span style=color:#e6db74>&#34;pubkey&#34;</span>
-  <span style=color:#a6e22e>network_id</span>   = <span style=color:#e6db74>&#34;example-id&#34;</span>
-
-  <span style=color:#a6e22e>k3s_token</span>        = <span style=color:#a6e22e>random_password</span>.<span style=color:#a6e22e>hcloud_cluster_token</span>.<span style=color:#a6e22e>result</span>
-  <span style=color:#a6e22e>install_k3s_exec</span> = <span style=color:#e6db74>&#34;server --disable traefik --node-label az=ex1&#34;</span>
-}
-<span style=color:#66d9ef>
-</span><span style=color:#66d9ef>module</span> <span style=color:#e6db74>&#34;hcloud_worker&#34;</span> {
-  <span style=color:#a6e22e>source</span> = <span style=color:#e6db74>&#34;github.com/nimbolus/tf-k3s/k3s-hcloud&#34;</span>
-
-  <span style=color:#a6e22e>name</span>         = <span style=color:#e6db74>&#34;k3s-worker&#34;</span>
-  <span style=color:#a6e22e>keypair_name</span> = <span style=color:#a6e22e>hcloud_ssh_key</span>.<span style=color:#a6e22e>yubikey</span>.<span style=color:#a6e22e>name</span>
-  <span style=color:#a6e22e>network_id</span>   = <span style=color:#a6e22e>hcloud_network</span>.<span style=color:#a6e22e>k3s</span>.<span style=color:#a6e22e>id</span>
-
-  <span style=color:#a6e22e>k3s_join_existing</span> = <span style=color:#66d9ef>true</span>
-  <span style=color:#a6e22e>k3s_url</span>           = module.<span style=color:#a6e22e>hcloud_master</span>.<span style=color:#a6e22e>k3s_url</span>
-  <span style=color:#a6e22e>k3s_token</span>         = <span style=color:#a6e22e>random_password</span>.<span style=color:#a6e22e>hcloud_cluster_token</span>.<span style=color:#a6e22e>result</span>
-  <span style=color:#a6e22e>install_k3s_exec</span>  = <span style=color:#e6db74>&#34;agent --node-label az=ex1&#34;</span>
-}
-<span style=color:#66d9ef>
-</span><span style=color:#66d9ef>resource</span> <span style=color:#e6db74>&#34;local_file&#34;</span> <span style=color:#e6db74>&#34;hcloud_kubeconfig&#34;</span> {
-  <span style=color:#a6e22e>filename</span> = <span style=color:#e6db74>&#34;hcloud-kubeconfig.yaml&#34;</span>
-  <span style=color:#a6e22e>content</span>  = module.<span style=color:#a6e22e>hcloud_master</span>.<span style=color:#a6e22e>kubeconfig</span>
-}
+</code></pre></div><h2 id=examples>Examples</h2><ul><li><a href=examples/basic/main.tf>basic</a>: basic usage of the k3s module with one server and one agent node</li><li><a href=examples/ha-hcloud/main.tf>ha-hcloud</a>: 3 Servers and 1 Agent with bootstrap token on Hetzner Cloud</li><li><a href=examples/ha-openstack/main.tf>ha-openstack</a>: 3 Servers and 1 Agent with bootstrap token on OpenStack</li></ul><h2 id=requirements>Requirements</h2><p>MacOS users need to install <code>coreutils</code> for the <code>timeout</code> command used by the <a href=./bootstrap-auth>bootstrap-auth</a> module:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>brew install coreutils
+</code></pre></div><h2 id=tests>Tests</h2><h3 id=basic>Basic</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>cd tests/basic
+go test -count<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span> -v
+</code></pre></div><h3 id=openstack>OpenStack</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>cd tests/ha-openstack
+cp env.sample .env
+$EDITOR .env
+go test -count<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span> -v
+</code></pre></div><h3 id=hcloud>hcloud</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>cd tests/ha-hcloud
+cp env.sample .env
+$EDITOR .env
+go test -count<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span> -v
 </code></pre></div></div></div></main></div></div><footer class="bg-dark py-5 row d-print-none"><div class="container-fluid mx-sm-5"><div class=row><div class="col-6 col-sm-4 text-xs-center order-sm-2"></div><div class="col-6 col-sm-4 text-right text-xs-center order-sm-3"></div><div class="col-12 col-sm-4 text-center py-2 order-sm-2"><small class=text-white>&copy; 2021 Nimbolus All Rights Reserved</small></div></div></div></footer></div><script src=https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js integrity=sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN crossorigin=anonymous></script><script src=https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js integrity=sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF crossorigin=anonymous></script><script src=https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js integrity=sha384-uQikAXnCAqsMb3ygtdqBYvcwvHUkzGIpjdGyy9owhURXHUxLC5LgTcSxJQH/RzjK crossorigin=anonymous></script><script src=/js/main.min.5e331f8640e0271b7a1294ff012ab8bffaa1445c9e9c86d7fc138db2e8341262.js integrity="sha256-XjMfhkDgJxt6EpT/ASq4v/qhRFyenIbX/BONsug0EmI=" crossorigin=anonymous></script></body></html>
