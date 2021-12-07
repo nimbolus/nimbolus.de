@@ -1,5 +1,5 @@
 {
-  "name": "nimolus.de",
+  "name": "nimbolus.de",
   "version": "0.0.1",
   "description": "nimbolus documentation.",
   "main": "none.js",
@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/nimbolus/nimbolus.de#readme",
   "devDependencies": {
-    "autoprefixer": "^9.8.6",
-    "postcss-cli": "^7.1.2"
+    "autoprefixer": ">=9.8.6",
+    "postcss-cli": ">=7.1.2"
   }
 }
